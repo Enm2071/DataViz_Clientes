@@ -107,7 +107,7 @@ const ClienteForm = (props) => {
     return (
         <form onSubmit={formik.handleSubmit} className={classes.container}>
             <header className={classes.header}>
-                <h2>Formulario de captura de clientes Prueba deployment</h2>
+                <h2>Formulario de captura de clientes</h2>
             </header>
             <div className={classes.content}>
                 <TextField
