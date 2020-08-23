@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+body{
+    background: url('../../Assets/1_M-jCc9NMJIwvvt0aMbsc2g.jpeg') no-repeat center center fixed;;
+    background-origin: content-box; 
+    background-size: cover;
+}
+body > div{
+    position: relative;
+}
+
+
+.container{
+    width: 40vw;
+    height: 80vh;
+    display: grid;
+    grid-template-areas: 'header' 'content' 'actions';
+    grid-template-rows: 4rem auto 3rem;
+    box-shadow:  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+    margin: auto;
+    position: fixed;
+    top: -15%;
+    bottom: 0%;
+    right: 0%;
+    left: 0%;
+    border-radius: 5px 20px;
+    animation-name: flip;
+    animation-duration: 2s;
+
+}
+
+.header{
+    grid-area: header;
+    background-color: rgba(0, 31, 63,0.95);
+    border-radius: 5px 20px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px rgba(0, 31, 63);
+}
+
+.content{
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 10px;
+    padding: 0  1rem 0 1rem;
+    background-color: rgba(255, 255, 255,0.95);
+}
+
+.content>div:last-child{
+    margin-bottom: 1rem;
+}
+
+.footer{
+    grid-area: actions;
+    background-color: rgba(0, 31, 63,0.95);
+    border-radius: 0 0 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+}
+
+.footer > button{
+    margin:1rem;
+    width: 25%;
+}
+
+
+  button:disabled{
+      background-color: #c7c6c6;
+      cursor:not-allowed;
+      border: 1px solid #ccc;
+      color: #383535;
+  }
+
+  button:not(:disabled){
+      animation: enable 1s linear;
+  }
+
+  .upAnimation{  
+    animation: enable 1s linear;
+  }
+
+  @keyframes enable {
+      0%{
+          transform: scale(1);
+      }
+
+      60%{
+          transform: scale(1.1);
+      }
+      100%{
+          transform: scale(1);
+      }
+  }
+
+  
+  @keyframes flip {
+    0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(0%);
+      }
+  }
+
+  
+@media (max-width: 800px) {
+    .container{
+        width: 90vw;
+        height: 80vh;
+    }
+
+    .header{
+       font-size: 12px;
+    }
+
+  }
+
+  @media (max-width: 1024px) {
+    .container{
+        width: 80vw;
+        height: 60vh;
+    }
+  }
