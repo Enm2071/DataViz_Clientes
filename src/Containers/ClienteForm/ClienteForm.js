@@ -100,7 +100,10 @@ const ClienteForm = (props) => {
             setTimeout(() => {
                 setSubmitting(false);
                 Message();
-            }, 3000)
+                setTimeout(() => {
+                    props.history.push('/confirmacion');
+                }, 2000);
+            }, 3000);
         }
     });
 
