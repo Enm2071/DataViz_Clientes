@@ -100,6 +100,7 @@ const ClienteForm = (props) => {
             setTimeout(() => {
                 setSubmitting(false);
                 Message();
+                localStorage.setItem('completed', true);
                 setTimeout(() => {
                     props.history.push('/confirmacion');
                 }, 2000);
