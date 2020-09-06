@@ -1,4 +1,14 @@
- 
+.card{
+    width: 800px;
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
+    animation-name: flip ;
+    animation-duration: 2s;
+    transition-timing-function: ease-in-out;
+}
+
+
 .animation{
     animation-name: flip ;
     animation-duration: 2s;
@@ -19,3 +29,29 @@
         transform: scale(1);
     }
 }
+
+@media (max-width: 800px) {
+    .card{
+        width: 80%;
+        height: 40%;
+        margin: auto;
+        margin-top: 2rem;
+        text-align: 'center';
+        animation-name: flip ;
+        animation-duration: 2s;
+        transition-timing-function: ease-in-out;
+    }
+  }
+
+
+  @media (max-width: 1024px) {
+    .card{
+        width: '800px';
+        margin: 'auto';
+        margin-top: '2rem';
+        text-align: 'center';
+        animation-name: flip ;
+        animation-duration: 2s;
+        transition-timing-function: ease-in-out;
+    }
+  }

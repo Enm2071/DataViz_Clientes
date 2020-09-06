@@ -9,7 +9,7 @@ import classes from './ConfirmacionEnvio.module.css';
 
 const ConfirmacionEnvio = (props) => {
     return (
-        <Card style={{ width: '800px', margin: 'auto', marginTop: '2rem', textAlign: 'center' }} className={classes.animation}>
+        <Card className={classes.card}>
             <CardActionArea>
                 <CardMedia
                     style={{height:'240px'}}

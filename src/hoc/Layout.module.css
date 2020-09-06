@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    background: url('../Assets/1_M-jCc9NMJIwvvt0aMbsc2g.jpeg') no-repeat ;
+    background-origin: content-box; 
+    background-size: cover;
+}
+body > div{
+    position: relative;
+}
